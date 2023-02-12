@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<head>
+<title>Apple(India)</title>
+<link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/a/ab/Apple-logo.png">
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</head>
+<style>
+ body{
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue","Helvetica","Arial",sans-serif;
+  }
+  .dum{
+    height: 12px;
+  }
+form{
+    position: relative;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    transition: all 1s;
+    width: 50px;
+    height: 30px;
+    background:#f5f5f5;
+    box-sizing: border-box;
+    border-radius: 25px;
+    border: 4px solid#f5f5f7;
+    padding: 5px;
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;;
+    height: 20px;
+    line-height: 30px;
+    outline: 0;
+    border: 0;
+    display: none;
+    font-size: 1em;
+    border-radius: 20px;
+    padding: 0 20px;
+}
+
+.fa{
+    box-sizing: border-box;
+    padding: 3px;
+    width: 42.5px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    color: rgba(0,0,0,0.8);
+    text-align: center;
+    font-size: 1.2em;
+    transition: all 1s;
+}
+
+form:hover{
+    width: 300px;
+    cursor: pointer;
+}
+
+form:hover input{
+    display: block;
+}
+
+form:hover .fa{
+
+    color:rgba(0,0,0,0.8) ;
+}
+
+
+
+
+
+
+
+a {
+  text-decoration: none;
+  color: #0070c9;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: #f2f2f2;
+  font-family: calibri;
+  padding: 0 22px;
+  padding-bottom: 21px;
+  overflow: hidden;
+}
+
+.footer-content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.footer-menu {
+  padding-top: 21px;
+  overflow: hidden;
+}
+
+.footer-col {
+  width: 20%;
+  float: left;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+h3 {
+    color: #333;
+    font-size: 14px;
+    position: relative;
+    z-index: 1;
+    background: #f2f2f2;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.product-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+.product-list li {
+  margin-bottom: 5px;
+  line-height: 1;
+}
+
+.product-list a {
+  color: #555;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.product-list a:hover {
+  color: #333;
+}
+
+input[type="checkbox"]:checked+.col-section .product-list {
+    transition: transform 300ms ease, -webkit-transform 300ms ease;
+    visibility: visible;
+    position: static;
+    transform: none;
+}
+
+input[type="checkbox"]:checked+.col-section h3::after {
+    transform: rotate(45deg) scale(1.08);
+}
+
+.footer-base {
+  padding-top: 34px;
+  padding-bottom: 21px;
+  color: #888;
+  font-size: 12px; 
+}
+
+.footer-more-ways {
+  margin-bottom: 7px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+@media only screen and (max-width: 767px) {
+  
+  footer {
+    padding: 0 16px;
+    padding-bottom: 21px;
+  }
+  
+  .footer-col {
+    width: 100%;
+  }
+  
+  .item {
+    border-bottom: 1px solid #d6d6d6;
+  }
+  
+  h3 {
+    padding: 10px 0;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  h3::after {
+    content: '+';
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: -2px;
+    margin-right: 8px;
+    transition: transform .3s ease
+  }
+  
+  .product-list {
+    visibility: hidden;
+    position: absolute;
+    transform: translateY(-100px);
+    z-index: 1;
+    padding: 5px 0 16px 0;
+  }
+  
+  .product-list li {
+    margin: 0;
+  }
+  
+  .product-list a {
+    display: block;
+    padding: 6px 14px;
+  }
+  
+  .footer-col {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .item-padding-top {
+    padding-top: 24px;
+  }
+}
+
+.footer-legal-copyright {
+    margin-right: 30px;
+    float: left;
+    margin-top: 3px;
+}
+
+.footer-legal-links {
+  float: left;
+}
+
+.footer-legal-links a {
+  border-right: 1px solid #d6d6d6;
+  margin-right: 10px;
+  padding-right: 12px;
+  display: inline-block;
+  margin-top: 3px;
+  white-space: nowrap;
+  color: #555;
+}
+
+.footer-legal-links a:last-child {
+  border-right: none;
+}
+
+.footer-legal-links a:hover {
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+<body>
+<div class="container-fluid">
+  <div class="row" style="background-color:rgba(0,0,0,0.8); position: fixed; width: 100%;">
+      <div class="col-sm-1"><span id="clock"></span></div>
+      <div class="col-sm-1"><a href="/"><img style="margin-left: 80%;" src="https://www.apple.com/ac/globalnav/7/en_IN/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_apple_image__b5er5ngrzxqq_large.svg"></a></div>
+      <div class="col-sm-1"><a class="nav-link" href="#" style="color: #f5f5f7; margin-top: 8%;">Store</a></div>
+      <div class="col-sm-1"><a class="nav-link" href="#" style="color: #f5f5f7; margin-top: 8%;">Mac</a></div>
+      <div class="col-sm-1"><a class="nav-link" href="/ipad" style="color: #f5f5f7; margin-top: 8%;">iPad</a></div>
+      <div class="col-sm-1"><a class="nav-link" href="#" style="color: #f5f5f7; margin-top: 8%;">iPhone</a></div>
+      <div class="col-sm-1"><a class="nav-link" href="#" style="color: #f5f5f7; margin-top: 8%;">AirPods</a></div>
+      <div class="col-sm-1"><a class="nav-link" href="./signup" style="color: #f5f5f7; margin-top: 8%;">Signup</a></div>
+      <div class="col-sm-1"><img src="https://www.apple.com/ac/globalnav/7/en_IN/images/be15095f-5a20-57d0-ad14-cf4c638e223a/globalnav_bag_image__yzte50i47ciu_large.svg"></div>
+      <div class="col-sm-3"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <form action="">
+          <input type="search" placeholder="Search apple.com">
+          <i class="fa fa-search"></i>
+        </form>
+      </div>
+  </div>
+
+
+<br>
+<section class="vh-100 bg-image"
+style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+<div class="mask d-flex align-items-center h-100 gradient-custom-3">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+        <div class="card" style="border-radius: 15px;">
+          <div class="card-body p-5">
+            <h2 class="text-uppercase text-center mb-5">Create an account</h2>
+
+            <form action="/signup" method="POST">
+
+              <div class="form-outline mb-4">
+                <input type="text" name="username" placeholder="Userame" class="form-control form-control-lg" />
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="email" name="email" class="form-control form-control-lg" placeholder="Your Email">
+              </div>
+
+              <div class="form-outline mb-4">
+                <input type="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
+             
+              </div>
+
+              
+
+              <div class="form-check d-flex justify-content-center mb-5">
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3cg" />
+                <label class="form-check-label" for="form2Example3g">
+                  I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
+                </label>
+              </div>
+
+              <div class="d-flex justify-content-center">
+                <button type="submit"
+                  class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
+              </div>
+
+              <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="/login"
+                  class="fw-bold text-body"><u>Login here</u></a></p>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+<footer>
+  <div class="footer-content">
+  <nav class="footer-menu">
+    <div class="footer-col">
+      <div class="item">
+        <input type="checkbox" id="products">
+        <div class="col-section">
+          <label for="products">
+          <h3>Shop and learn</h3>  
+        </label>
+          <ul class="product-list">
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">TV</a></li>
+            <li><a href="#">Music</a></li>
+            <li><a href="#">iTunes</a></li>
+            <li><a href="#">HomePod</a></li>
+            <li><a href="#">iPod touch</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Gift Cards</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="item">
+        <input type="checkbox" id="store">
+        <div class="col-section">
+          <label for="store">
+          <h3>Apple Store</h3>  
+        </label>
+          <ul class="product-list">
+            <li><a href="#">Find a Store</a></li>
+            <li><a href="#">Genius Bar</a></li>
+            <li><a href="#">Today at Apple</a></li>
+            <li><a href="#">Apple Camp</a></li>
+            <li><a href="#">Field Trip</a></li>
+            <li><a href="#">Apple Store App</a></li>
+            <li><a href="#">Refurbished and Clearance</a></li>
+            <li><a href="#">Financing</a></li>
+            <li><a href="#">Reuse and Recycling</a></li>
+            <li><a href="#">Order Status</a></li>
+            <li><a href="#">Shopping Help</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-col">
+      <div class="item">
+        <input type="checkbox" id="education">
+        <div class="col-section">
+          <label for="education">
+          <h3>For Education</h3>  
+        </label>
+          <ul class="product-list">
+            <li><a href="#">Apple and Education</a></li>
+            <li><a href="#">Shop for College</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="item item-padding-top">
+        <input type="checkbox" id="business">
+        <div class="col-section">
+          <label for="business">
+          <h3>For Business</h3>  
+        </label>
+          <ul class="product-list">
+            <li><a href="#">Apple and Business</a></li>
+            <li><a href="#">Shop for Business</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="item">
+        <input type="checkbox" id="acccount">
+        <div class="col-section">
+          <label for="acccount">
+          <h3>Account</h3>  
+        </label>
+          <ul class="product-list">
+            <li><a href="#">Manage Your Apple ID</a></li>
+            <li><a href="#">Apple Store Account</a></li>
+            <li><a href="#">iCloud.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="item item-padding-top">
+        <input type="checkbox" id="values">
+        <div class="col-section">
+          <label for="values">
+          <h3>Apple Values</h3>  
+        </label>
+          <ul class="product-list">
+            <li><a href="#">Accessibility</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Environment</a></li>
+            <li><a href="#">Inclusion and Diversity</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Supplier Responsibility</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <div class="item">
+        <input type="checkbox" id="about">
+        <div class="col-section">
+          <label for="about">
+          <h3>About Apple</h3>  
+        </label>
+          <ul class="product-list">
+            <li><a href="#">Newsroom</a></li>
+            <li><a href="#">Apple Leadership</a></li>
+            <li><a href="#">Job Opportunities</a></li>
+            <li><a href="#">Investors</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Contact Apple</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <section class="footer-base">
+    <div class="footer-more-ways" x-ms-format-detection="none">
+		More ways to shop: Visit an <a href="/retail/">Apple Store</a>, <span class="nowrap">call 1-800-MY-APPLE, or <a href="#">find a reseller</a></span>.
+	</div>
+    <div class="footer-legal">
+		  <div class="footer-legal-copyright">Copyright © 2018 Apple Inc. All rights reserved.</div>
+		  <div class="footer-legal-links">
+			  <a href="#">Privacy Policy</a>
+			  <a href="#">Terms of Use</a>
+			  <a href="#">Sales and Refunds</a>
+			  <a href="#">Legal</a>
+			  <a href="#">Site Map</a>
+		  </div>
+	  </div>
+  </section>
+    </div>
+</footer>
+</div>
+</body>
+</html>
